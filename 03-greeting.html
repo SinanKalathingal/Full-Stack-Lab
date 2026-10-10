@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Greeting Alert</title>
+</head>
+<body>
+
+    <!-- Requirement 1: HTML Form -->
+    <label for="nameInput">Enter your name:</label>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button id="greetBtn">Say Hello</button>
+
+    <!-- Requirement 2: JavaScript Linking -->
+    <script>
+        // Requirement 3: Button Click Event Listener
+        document.getElementById("greetBtn").addEventListener("click", function() {
+            // Requirement 4: Capturing Data & Alert
+            let userName = document.getElementById("nameInput").value;
+            alert("Hello, " + userName + "! Welcome to the lab.");
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table Generator</title>
+</head>
+<body>
+
+    <!-- Requirement 1: HTML Setup -->
+    <label for="tableInput">Enter a number:</label>
+    <input type="number" id="tableInput" placeholder="Enter a number">
+    <button id="generateBtn">Generate Table</button>
+
+    <script>
+        // Requirement 2: Initial Output
+        let welcomeMsg = "Welcome to the Math Generator!";
+        document.write(welcomeMsg + "<br><br>");
+
+        // Requirement 3: Number Capture & Event Listener
+        document.getElementById("generateBtn").addEventListener("click", function() {
+            let num = parseInt(document.getElementById("tableInput").value);
+
+            // Requirement 4: The Loop
+            if (!isNaN(num)) {
+                for (let i = 1; i <= 10; i++) {
+                    let result = num * i;
+                    document.write(num + " x " + i + " = " + result + "<br>");
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

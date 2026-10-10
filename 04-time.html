@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Time &amp; Greeting Generator</title>
+</head>
+<body>
+  <h2 id="timeDisplay"></h2>
+  <button id="greetBtn" type="button">Greet</button>
+  <h2 id="greetingMessage"></h2>
+
+  <script>
+    let now = new Date();
+    document.getElementById("timeDisplay").innerText = now.toLocaleString();
+
+    const greetBtn = document.getElementById("greetBtn");
+    greetBtn.addEventListener("click", function () {
+      const hour = new Date().getHours();
+      let greeting;
+
+      if (hour < 12) {
+        greeting = "Good Morning!";
+      } else if (hour < 18) {
+        greeting = "Good Afternoon!";
+      } else {
+        greeting = "Good Evening!";
+      }
+
+      document.getElementById("greetingMessage").innerText = greeting;
+    });
+  </script>
+</body>
+</html>
