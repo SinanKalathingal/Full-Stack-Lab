@@ -7,21 +7,21 @@
     <!-- Requirement 1: HTML Setup -->
     <label>Enter a number: </label>
     <input type="number" id="numberInput" />
-    <button onclick="numCapture()">Print Words</button>
+    <button id="printBtn">Print Words</button>
 
     <script>
       // Requirement 2: Array Creation & Initial Print
       let colors = ["Red", "Green", "Blue"];
       document.write("First color: " + colors[0] + "<br><br>");
 
-      function numCapture() {
+      document.getElementById("printBtn").addEventListener("click", () => {
         let count = parseInt(document.getElementById("numberInput").value);
 
         // Requirement 4: The Loop
         for (let i = 0; i < count; i++) {
             document.write("JavaScript is fun!<br>");
         }
-    }
+      })
       
     </script>
   </body>
