@@ -1,32 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <title>JS Logic - Loop Exercise</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- Requirement 1: HTML Setup -->
-    <label for="numberInput">Enter a number:</label>
-    <input type="number" id="numberInput" placeholder="Enter a number">
-    <button id="printBtn">Print Words</button>
+    <label>Enter a number: </label>
+    <input type="number" id="numberInput" />
+    <button onclick="numCapture()">Print Words</button>
 
     <script>
-        // Requirement 2: Array Creation & Initial Print
-        let colors = ["Red", "Green", "Blue"];
-        document.write("First color: " + colors[0] + "<br><br>");
+      // Requirement 2: Array Creation & Initial Print
+      let colors = ["Red", "Green", "Blue"];
+      document.write("First color: " + colors[0] + "<br><br>");
 
-        // Requirement 3: Number Capture & Event Listener
-        document.getElementById("printBtn").addEventListener("click", function() {
-            let count = parseInt(document.getElementById("numberInput").value);
+      function numCapture() {
+        let count = parseInt(document.getElementById("numberInput").value);
 
-            // Requirement 4: The Loop
-            if (!isNaN(count) && count > 0) {
-                for (let i = 0; i < count; i++) {
-                    document.write("JavaScript is fun!<br>");
-                }
-            }
-        });
+        // Requirement 4: The Loop
+        for (let i = 0; i < count; i++) {
+            document.write("JavaScript is fun!<br>");
+        }
+    }
+      
     </script>
-
-</body>
+  </body>
 </html>
