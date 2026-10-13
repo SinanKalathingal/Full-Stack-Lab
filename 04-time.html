@@ -1,32 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <title>Dynamic Time &amp; Greeting Generator</title>
-</head>
-<body>
-  <h2 id="timeDisplay"></h2>
-  <button id="greetBtn" type="button">Greet</button>
-  <h2 id="greetingMessage"></h2>
+  <head>
+    <title>Dynamic Time &amp; Greeting Generator</title>
+  </head>
+  <body>
+    <h2 id="timeDisplay">Hello</h2>
+    <button id="greetBtn" onclick="greeting()">Greet</button>
+    <h2 id="greetingMessage">Greeting</h2>
 
-  <script>
-    let now = new Date();
-    document.getElementById("timeDisplay").innerText = now.toLocaleString();
+    <script>
+      let now = new Date();
+      document.getElementById("timeDisplay").innerText = now.toLocaleString();
 
-    const greetBtn = document.getElementById("greetBtn");
-    greetBtn.addEventListener("click", function () {
-      const hour = new Date().getHours();
-      let greeting;
+      function greeting(){
+        const hour = new Date().getHours();
+        let greeting;
 
-      if (hour < 12) {
-        greeting = "Good Morning!";
-      } else if (hour < 18) {
-        greeting = "Good Afternoon!";
-      } else {
-        greeting = "Good Evening!";
+        if (hour < 12) {
+          greeting = "Good Morning!";
+        } else if (hour < 18) {
+          greeting = "Good Afternoon!";
+        } else {
+          greeting = "Good Evening!";
+        }
+
+        document.getElementById("greetingMessage").innerText = greeting;
+      
       }
-
-      document.getElementById("greetingMessage").innerText = greeting;
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
