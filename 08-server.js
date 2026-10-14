@@ -3,6 +3,7 @@ const http = require('http');
 
 const server = http.createServer((req, res) => {
     // Requirement 2: Sending HTML
+    res.writeHead(200, {"content-type": "text/HTML"})
     res.write("<h1>Welcome to my Node.js Server!</h1><p>This is very easy.</p>");
     res.end();
 });
